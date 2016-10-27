@@ -5,7 +5,7 @@
 
 
 -- Import data
-sqlite3 hsin
+sqlite3 hsin.db
 .mode csv
 -- Repalce by path to csv
 .import LR_Transactions_GEOREF.csv lr_pcd
