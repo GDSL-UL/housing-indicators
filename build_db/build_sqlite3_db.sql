@@ -9,7 +9,7 @@ sqlite3 HSIN
 
 -- Import csv file with LRPP transactions
 .mode csv
-.import /home/alekos/Documents/Land_Registry/LR_Transactions_GEOREF.csv LRPP_PCD_RAW
+.import LR_Transactions_GEOREF.csv LRPP_PCD_RAW
 
 -- Update null values in columns
 UPDATE LRPP_PCD_RAW SET Postcode=NULL WHERE Postcode='NA';
@@ -101,7 +101,7 @@ CREATE INDEX X_BNG ON LRPP_PCD (oseast1m);
 CREATE INDEX Y_BNG ON LRPP_PCD (osnrth1m);
 
 -- Delete old table
-DROP TABLE LRPP_PCD_RAW
+DROP TABLE LRPP_PCD_RAW;
 
 -- Test
 SELECT * FROM LRPP_PCD LIMIT 5;
